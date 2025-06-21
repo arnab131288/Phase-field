@@ -1,0 +1,48 @@
+DIM = 2;
+
+##Mesh size in different directions##
+Num_X = 100;
+Num_Y = 100;
+
+#Grid spacing#
+dx = 0.01;
+dy  = 0.01;
+
+##Time spacing##
+dt   = 1e-5;
+##Total simulation timesteps##
+total_steps = 50000;
+##Time interval after which results are stored##
+timebreak = 5000;
+
+##Phase-field model parameters##
+epsilon = 0.01;
+tau = 0.0003;
+K = 0.0;
+delta = 0.0;
+j = 4;
+theta_0 = 0.0;
+alpha = 0.0;
+gamma = 0.0;
+a = 0.0;
+T_e = 0.0;
+
+##Boundary conditions in the format: variable, TOP, BOTTOM, LEFT, RIGHT, FRONT, BACK##
+boundary = phi,NOFLUX,NOFLUX,NOFLUX,NOFLUX;
+boundary = temp,NOFLUX,NOFLUX,NOFLUX,NOFLUX;
+
+##Initial conditions (select only one from the below)##
+#Fill_Cube : Fills a square or a rectangle and instruction to be provided in the format : variable, value, x_start, x_end, y_start, y_end, z_start, z_end (the last two for DIM = 3)
+#Fill_Cube = phi,1.0,0,50,0,100;
+Fill_Constant = phi,0.0;
+Fill_Cube = temp,1.0,0,50,0,100;
+#Fill_Sphere : Fills a sphere and instruction to be provided in the format : variable, value, radius, x_center, y_center, z_center (for DIM = 3)
+#Fill_Sphere = phi,1.0,5,150,0;
+
+##Re-starting a simulation from a previous timestep##
+#RESPAWN = 1;
+#restart_time = 50000; 
+
+##File-writing options##
+#WRITE_TO_CSV = 1;
+WRITE_TO_VTK = 1;
