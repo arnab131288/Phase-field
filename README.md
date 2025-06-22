@@ -25,14 +25,14 @@ Follow the steps to run the simulation code:
 2. Create a new environment :
         conda create -n phasefield_env python = 3.10
  
-3. Activate the environment
+3. Activate the environment :
        conda activate phasefield
 
-4. Install dependencies
+4. Install dependencies :
        pip install -r requirements.txt
      Note: Ensure the correct path to requirements.txt
 
-5. Run the code
+5. Run the code :
      python3 src/main.py
      Note: Again ensure correct path to the src folder
 
