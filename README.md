@@ -13,6 +13,7 @@ Follow the steps to run the simulation code:
 3. ./src/simulation input.in
 
 Running the code will create a folder output where the output files are stored. The output files can be visualized using open-source packages such Paraview, gnuplot or Matplotlib.
+More details on preparing the input file and solver description can be found in the docs folder. Some examples reproducing the results of the paper can be found in the examples folder. Test runs are provided in the test folder.
 
 # Python
 This folder contains Python implementation of the model equation of the above reference. The governing equations are solved explicitly using a finite difference scheme. This is a 2D serial code.
@@ -36,7 +37,8 @@ Follow the steps to run the simulation code:
      python3 src/main.py
      Note: Again ensure correct path to the src folder
 
-Running the code will create a folder output where the output files and plots are stored
+Running the code will create a folder output where the output files and plots are stored.
+More details on  assigning the input parameters and solver description can be found in the docs folder. Example runs are provided in examples folder.
 
 # C_explicit_implicit
 This folder contains C implementation of the model equations of the above reference. The phase-field is solved explicitly and temperature equations are solved implicitly. The code is under construction and currently might not work as expected. 
